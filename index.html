@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/atn5owe.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <script type="module" src="scripts.js" defer></script>
+  </head>
+  <body>
+    <h1>Marc & Ronja ToDo</h1>
+
+    <div class="input-container">
+      <i class="fa-solid fa-circle-xmark"></i>
+      <h1>Hvad ønsker du at oprette?</h1>
+      <div class="checkboxes">
+        <span>
+          <p>Køb</p>
+          <input type="checkbox" name="" id="buy" />
+        </span>
+        <span>
+          <p>Reminder</p>
+          <input type="checkbox" name="" id="remind" />
+        </span>
+        <span>
+          <p>To Do</p>
+          <input type="checkbox" name="" id="todo" />
+        </span>
+      </div>
+      <div class="desc-container">
+        <p>Overskrift:</p>
+        <input class="header" type="text" />
+        <p>Beskrivelse:</p>
+        <input class="desc" type="text" />
+        <p>Link:</p>
+        <input class="link" type="text" />
+        <button class="imgBtn">Tilføj Billede</button>
+        <button class="addBeam btn-70">Tilføj Note</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="buy-container">
+        <h2>Køb</h2>
+      </div>
+      <div class="remind-container">
+        <h2>Remind</h2>
+      </div>
+      <div class="todo-container">
+        <h2>To Do</h2>
+      </div>
+    </div>
+    <button class="new btn-70">Ny Note</button>
+    <canvas id="gradient-canvas" data-transition-in />
+  </body>
+</html>
