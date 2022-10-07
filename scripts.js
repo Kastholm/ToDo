@@ -1,7 +1,7 @@
 /* -------------------------------------------------------------------------- */
 /*                               Making Gradient                              */
 /* -------------------------------------------------------------------------- */
-import { Gradient } from "/Gradient.js";
+import { Gradient } from "./Gradient.js";
 // Create your instance
 const gradient = new Gradient();
 // Call `initGradient` with the selector to your canvas
@@ -42,6 +42,8 @@ document.querySelector(".checkboxes").addEventListener("click", () => {
     remindCB.style.pointerEvents = "none";
     todoCB.style.pointerEvents = "none";
     descC.style.display = "grid";
+    inputC.classList.add("inputC-active");
+    inputC.classList.remove("inputC-inactive");
     return;
   } else if (remindCB.checked) {
     console.log("jahah");
@@ -49,6 +51,8 @@ document.querySelector(".checkboxes").addEventListener("click", () => {
     todoCB.style.pointerEvents = "none";
     remind = true;
     descC.style.display = "grid";
+    inputC.classList.add("inputC-active");
+    inputC.classList.remove("inputC-inactive");
     return;
   } else if (todoCB.checked) {
     console.log("adhaf");
@@ -56,9 +60,13 @@ document.querySelector(".checkboxes").addEventListener("click", () => {
     remindCB.style.pointerEvents = "none";
     todo = true;
     descC.style.display = "grid";
+    inputC.classList.add("inputC-active");
+    inputC.classList.remove("inputC-inactive");
     return;
   }
   descC.style.display = "none";
+  inputC.classList.remove("inputC-active");
+  inputC.classList.add("inputC-inactive");
   buyCB.style.pointerEvents = "visible";
   remindCB.style.pointerEvents = "visible";
   todoCB.style.pointerEvents = "visible";
@@ -134,6 +142,6 @@ CB.forEach((box, index) => {
 
    }); */
 
-   document.querySelector('.new').addEventListener('click', () => { 
-     inputC.style.display = "grid";
-    } )
+document.querySelector(".new").addEventListener("click", () => {
+  inputC.style.display = "grid";
+});

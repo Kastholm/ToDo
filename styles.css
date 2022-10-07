@@ -100,9 +100,14 @@ h1 {
 }
 
 .input-container {
-  position: fixed;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  min-height: 20em;
+  min-width: 30em;
+  margin-bottom: -150px;
+  margin-left: -230px;
   background-color: #b4da61;
-  inset: 5% 25%;
   border-radius: 10px;
   display: -ms-grid;
   display: grid;
@@ -125,13 +130,12 @@ h1 {
 }
 
 .input-container .addBeam {
-  position: absolute;
-  bottom: 3%;
-  left: 50%;
-  margin-top: -100px;
-  /* Negative half of height. */
-  margin-left: -110px;
+  /* position: absolute;
+    bottom: 3%;
+    left: 50%;
+    margin-top: -100px; /* Negative half of height. */
   /* Negative half of width. */
+  margin-top: 20px;
 }
 
 .input-container .fa-circle-xmark:hover {
@@ -188,6 +192,70 @@ h1 {
   max-width: 25;
   margin: 0 auto;
   grid-auto-flow: row;
+}
+
+.inputC-active {
+  margin-bottom: -320px;
+  margin-left: -400px;
+  min-height: 40em;
+  min-width: 50em;
+}
+
+.inputC-active .desc-container {
+  -webkit-animation: inputAniIn .7s ease-in-out forwards;
+          animation: inputAniIn .7s ease-in-out forwards;
+}
+
+@-webkit-keyframes inputAniIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes inputAniIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+.inputC-inactive {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  bottom: 50%;
+  left: 50%;
+  min-height: 20em;
+  min-width: 30em;
+  margin-bottom: -150px;
+  margin-left: -230px;
+}
+
+.inputC-inactive .desc-container {
+  -webkit-animation: inputAniOut 0.7s ease-in-out forwards;
+          animation: inputAniOut 0.7s ease-in-out forwards;
+}
+
+@-webkit-keyframes inputAniOut {
+  0% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes inputAniOut {
+  0% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .btn-70,
